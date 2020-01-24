@@ -14,21 +14,19 @@ def directors_totals(nds)
   #
   # The Hash result be full of things like "Jean-Pierre Jeunet" => "222312123123"
 
-  result = {  }
+  result = {}
 
   director_index = 0
   movie_index = 0
 
   while director_index < nds.size do
     while movie_index < nds[director_index].size do
-      nds[director_index][:total_gross] += nds[director_index][movie_index][:worldwide_gross]
+      result[nds[director_index][:name]] += nds[director_index][movie_index][:worldwide_gross]
       movie_index += 1
     end
     director_index += 1
     movie_index = 0
   end
-nds
-
   #
   # Use loops, variables and the accessing method, [], to loop through the NDS
   # and total up all the
@@ -38,5 +36,5 @@ nds
   #
   #
   # Be sure to return the result at the end!
-  nil
+  result
 end
