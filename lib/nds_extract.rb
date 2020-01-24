@@ -20,10 +20,14 @@ def directors_totals(nds)
   movie_index = 0
 
   while director_index < nds.size do
-    nds[director_index][:total_gross] += nds[director_index][movie_index][:worldwide_gross]
-    movie_index += 1
+    while movie_index < nds[director_index].size do
+      nds[director_index][:total_gross] += nds[director_index][movie_index][:worldwide_gross]
+      movie_index += 1
+    end
+    director_index += 1
+    movie_index = 0
   end
-
+nds
 
   #
   # Use loops, variables and the accessing method, [], to loop through the NDS
