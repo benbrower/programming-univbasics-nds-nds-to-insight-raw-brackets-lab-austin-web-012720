@@ -24,7 +24,7 @@ def directors_totals(nds)
     movie_index += 1
   end
 
-  
+
   #
   # Use loops, variables and the accessing method, [], to loop through the NDS
   # and total up all the
